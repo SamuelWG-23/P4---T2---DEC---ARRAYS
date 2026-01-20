@@ -29,10 +29,41 @@ const arrEstudiantes = [
 
 let passed = arrEstudiantes.filter(student => student.nota >= 5);
 console.log(passed);
-let sortedByAge = arrEstudiantes.sort((a,b) => b.edad - a.edad);
+let sortedByAge = arrEstudiantes.sort((a,b) => a.edad - b.edad);
 console.log(sortedByAge);
+let names = arrEstudiantes.map(name => name.nombre);
+console.log(names);
+let averageScore = arrEstudiantes.reduce((acum,num) => acum + num.nota,0)/arrEstudiantes.length;
+console.log(averageScore);
 
+//Exercise 4
 
+let words = ["hola","salva","durillo"]
+console.log(words);
+let bigWords = words.filter(word => word.length >= 5);
+console.log(bigWords);
+let reverseWords = words.map(word => word.split('').reverse().join(''));
+console.log(reverseWords);
+let wordLength = words.sort((a,b) => b.length - a.length);
+console.log(wordLength);
+
+//Exercise 5
+
+let firstNumbers = [3,21,31];
+let lastNumbers = [41,51,61];
+let sumOfNumbers =  firstNumbers.map((num,i) => num + lastNumbers[i]);
+console.log(sumOfNumbers);
+let timesOfNumbers =  firstNumbers.map((num,i) => num * lastNumbers[i]);
+console.log(timesOfNumbers);
+let findingIndexNumber = firstNumbers.findIndex(num => num > 10);
+console.log(findingIndexNumber);
+
+//Exercise 6
+
+const arrFrase = ["La", "vida", "es", "bella", "y", "divertida"];
+console.log(arrFrase);
+let oneString = arrFrase.reverse((bigString,word) => bigString + word,0);
+console.log(oneString)
 
 
 
